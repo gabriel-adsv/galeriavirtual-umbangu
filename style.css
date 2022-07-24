@@ -287,14 +287,13 @@ nav.show div.icon-close {
   width: 100%;
   background: var(--base-color);
   position: absolute;
-  top: -16.8%;
-  left: 16.7%;
+  top: -3rem;
+  left: 3rem;
   z-index: 0;
 }
 
 #inicio .image img {
   position: relative;
-  right: 2.93rem;
 }
 
 #inicio .image img,
@@ -306,7 +305,7 @@ nav.show div.icon-close {
   margin-bottom: 1rem;
 }
 
-#inicio .text h3 {
+#inicio .text h3, #bio .text h3 {
   color: var(--base-color);
   font-weight: 700;
   margin-bottom: 1rem;
@@ -319,9 +318,8 @@ nav.show div.icon-close {
 }
 
 #inicio .text p {
-  width: 25rem;
-
-  margin-bottom: 0;
+  /* width: 25rem; */
+  margin-bottom: 1rem;
 }
 
 #inicio .text p strong {
@@ -418,6 +416,15 @@ nav.show div.icon-close {
 
 #bio .text p {
   margin-bottom: 2rem;
+}
+
+#bio .bio-block span {
+    display: list-item;
+    margin-left: 1rem;
+}
+#bio .bio-block span:first-of-type {
+    margin-left: 0;
+    list-style-type: none;
 }
 
 /*====  EVENTOS ============================ */
@@ -621,13 +628,15 @@ footer .social a:hover {
 .back-to-top {
   background: var(--base-color);
   color: var(--text-color-light);
+  border: 1px solid white;
 
   position: fixed;
   right: 1rem;
   bottom: 1rem;
 
   padding: 0.5rem;
-  clip-path: circle();
+  /* clip-path: circle(); */
+  border-radius: 50%;
 
   font-size: 1.5rem;
   line-height: 0;
@@ -713,11 +722,12 @@ footer .social a:hover {
     order: 1;
     min-width: none;
     max-height: 20rem;
+    float: right;
+    margin: 0 0 1rem 2rem;
   }
 
   #inicio .text {
     order: 0;
-    max-width: 24rem;
     text-align: left;
   }
 
@@ -738,11 +748,12 @@ footer .social a:hover {
     order: 1;
     min-width: none;
     max-height: 20rem;
+    float: right;
+    margin: 0 1rem 1rem 2rem;
   }
 
   #bio .text {
     order: 0;
-    max-width: 24rem;
     text-align: left;
   }
 
