@@ -301,6 +301,34 @@ nav.show div.icon-close {
   border-radius: 0.25rem;
 }
 
+#inicio .image.rotating img {
+    position: absolute;
+    right: 0;
+    opacity: 0;
+}
+#inicio .image.rotating img.active {
+    position: relative;
+    opacity: 1;
+    animation-name: image-rotation-in;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+}
+#inicio .image.rotating img.inactive {
+    opacity: 0;
+    animation-name: image-rotation-out;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes image-rotation-in {
+    from { transform: translateX(-3rem); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+@keyframes image-rotation-out {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(3rem); opacity: 0; }
+}
+
 #inicio .text h1 {
   margin-bottom: 1rem;
 }
@@ -389,14 +417,13 @@ nav.show div.icon-close {
   width: 100%;
   background: var(--base-color);
   position: absolute;
-  top: -16.8%;
-  left: 16.7%;
+  top: -3rem;
+  left: 3rem;
   z-index: 0;
 }
 
 #bio .image img {
   position: relative;
-  right: 2.93rem;
 }
 
 #bio .image img,

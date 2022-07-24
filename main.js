@@ -31,6 +31,26 @@ function changeHeaderWhenScroll() {
   }
 }
 
+/* muda imagem a cada X segundos*/
+const secondsToChange = 6;
+var rotateToNextImage = function() {
+    let images = document.querySelectorAll(".image.rotating img");
+    let current = null;
+    for (let index = 0; index < images.length; index++) {
+        images[index].classList.remove("inactive");
+        if (images[index].classList.contains("active")) {
+            current = index;
+        }
+    }
+    
+    let next = current+1 >= images.length ? 0 : current+1;
+    
+    images[current].classList.remove("active");
+    images[current].classList.add("inactive");
+    images[next].classList.add("active");
+};
+setInterval(rotateToNextImage, secondsToChange * 1000);
+
 /* Evento carousel slider swiper */
 const swiper = new Swiper('.swiper-container', {
   slidesPerView: 1,
