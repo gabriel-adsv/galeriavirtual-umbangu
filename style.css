@@ -279,6 +279,9 @@ nav.show div.icon-close {
 
 #inicio .image {
   position: relative;
+  left: -1.5rem;
+  max-width: 900px;
+  margin: auto;
 }
 
 #inicio .image::before {
@@ -289,11 +292,13 @@ nav.show div.icon-close {
   position: absolute;
   top: -3rem;
   left: 3rem;
+  right: -3rem;
   z-index: 0;
 }
 
 #inicio .image img {
   position: relative;
+  width: 100%;
 }
 
 #inicio .image img,
@@ -303,7 +308,7 @@ nav.show div.icon-close {
 
 #inicio .image.rotating img {
     position: absolute;
-    right: 0;
+    left: 0;
     opacity: 0;
 }
 #inicio .image.rotating img.active {
@@ -365,21 +370,25 @@ nav.show div.icon-close {
 
 #sobre .image {
   position: relative;
+  max-width: 900px;
+  margin: auto;
 }
 
 #sobre .image::before {
   content: '';
-  height: 100%;
   width: 100%;
+  height: 100%;
   background: var(--base-color);
   position: absolute;
-  top: -8.3%;
-  left: -33%;
+  top: -2rem;
+  right: 12rem;
+  bottom: 6rem;
   z-index: 0;
 }
 
 #sobre .image img {
   position: relative;
+  width: 100%;
 }
 
 #sobre .image img,
@@ -409,6 +418,10 @@ nav.show div.icon-close {
 
 #bio .image {
   position: relative;
+  display: block;
+  left: -1.5rem;
+  margin: auto;
+  max-width: 900px;
 }
 
 #bio .image::before {
@@ -424,6 +437,7 @@ nav.show div.icon-close {
 
 #bio .image img {
   position: relative;
+  width: 100%;
 }
 
 #bio .image img,
@@ -571,6 +585,10 @@ nav.show div.icon-close {
   margin-bottom: 0.75rem;
 }
 
+.card img {
+    max-width: 100%;
+}
+
 /* ====  GALERIA ============================ */
 #galeria {
   text-align: center;
@@ -583,6 +601,10 @@ nav.show div.icon-close {
 
 #galeria .note span{
   color: var(--base-color);
+}
+
+#galeria iframe {
+    max-width: 100%;
 }
 
 /*====  CONTATO ============================ */
@@ -749,8 +771,11 @@ footer .social a:hover {
     order: 1;
     min-width: none;
     max-height: 20rem;
+    max-width: none;
     float: right;
-    margin: 0 0 1rem 2rem;
+    margin: 0 0 2rem 2rem;
+    display: inline-block;
+    left: 0;
   }
 
   #inicio .text {
@@ -773,10 +798,13 @@ footer .social a:hover {
 
   #bio .image {
     order: 1;
+    width: 30rem;
     min-width: none;
     max-height: 20rem;
     float: right;
     margin: 0 1rem 1rem 2rem;
+    display: inline-block;
+    left: 0;
   }
 
   #bio .text {

@@ -128,3 +128,11 @@ window.addEventListener('scroll', function () {
   backToTop();
   activateMenuAtCurrentSection();
 });
+
+/* redimensionar iframe */
+var resizeIframe = function() {
+    const frame = document.querySelector("#frame iframe");
+    frame.height = frame.offsetWidth * 0.5625;
+};
+resizeIframe();
+window.addEventListener("resize", resizeIframe);
