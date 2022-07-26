@@ -78,10 +78,14 @@ const scrollReveal = ScrollReveal({
 scrollReveal.reveal(
   `#inicio .image, #inicio .text,
   #sobre .image, #sobre .text,
+  #bio .image, #bio .text,
   #exposicao header, #exposicao .card,
+  #galeria .title, #galeria .subtitle,
   #evento header, #evento .evento,
+  #evento .eventos, #evento .note,
   #contato .text, #contato .links,
-  footer .brand, footer .social
+  footer .brand, footer .support,
+  footer .devs
   `,
   { interval: 100 }
 );
