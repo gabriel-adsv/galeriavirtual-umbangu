@@ -72,7 +72,7 @@ const scrollReveal = ScrollReveal({
   origin: 'top',
   distance: '30px',
   duration: 700,
-  reset: true
+  reset: false
 });
 
 scrollReveal.reveal(
@@ -132,3 +132,11 @@ window.addEventListener('scroll', function () {
   backToTop();
   activateMenuAtCurrentSection();
 });
+
+/* redimensionar iframe */
+var resizeIframe = function() {
+    const frame = document.querySelector("#frame iframe");
+    frame.height = frame.offsetWidth * 0.5625;
+};
+resizeIframe();
+window.addEventListener("resize", resizeIframe);

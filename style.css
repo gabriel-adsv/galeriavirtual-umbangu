@@ -279,6 +279,9 @@ nav.show div.icon-close {
 
 #inicio .image {
   position: relative;
+  left: -1.5rem;
+  max-width: 900px;
+  margin: auto;
 }
 
 #inicio .image::before {
@@ -289,11 +292,13 @@ nav.show div.icon-close {
   position: absolute;
   top: -3rem;
   left: 3rem;
+  right: -3rem;
   z-index: 0;
 }
 
 #inicio .image img {
   position: relative;
+  width: 100%;
 }
 
 #inicio .image img,
@@ -303,7 +308,7 @@ nav.show div.icon-close {
 
 #inicio .image.rotating img {
     position: absolute;
-    right: 0;
+    left: 0;
     opacity: 0;
 }
 #inicio .image.rotating img.active {
@@ -365,21 +370,25 @@ nav.show div.icon-close {
 
 #sobre .image {
   position: relative;
+  max-width: 900px;
+  margin: auto;
 }
 
 #sobre .image::before {
   content: '';
-  height: 100%;
   width: 100%;
+  height: 100%;
   background: var(--base-color);
   position: absolute;
-  top: -8.3%;
-  left: -33%;
+  top: -2rem;
+  right: 12rem;
+  bottom: 6rem;
   z-index: 0;
 }
 
 #sobre .image img {
   position: relative;
+  width: 100%;
 }
 
 #sobre .image img,
@@ -409,6 +418,10 @@ nav.show div.icon-close {
 
 #bio .image {
   position: relative;
+  display: block;
+  left: -1.5rem;
+  margin: auto;
+  max-width: 900px;
 }
 
 #bio .image::before {
@@ -424,6 +437,7 @@ nav.show div.icon-close {
 
 #bio .image img {
   position: relative;
+  width: 100%;
 }
 
 #bio .image img,
@@ -543,12 +557,16 @@ nav.show div.icon-close {
   text-align: center;
 }
 
+.cards {
+  display: inline-block;
+}
+
 .card {
   margin: 0 auto;
 }
 
 .card {
-  padding: 3.625rem 2rem;
+  padding: 2rem 2rem;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
   border-bottom: 0.25rem solid var(--base-color-second);
   border-radius: 0.25rem 0.25rem 0 0;
@@ -572,12 +590,15 @@ nav.show div.icon-close {
 }
 
 .img-expo {
-  width: 15.75rem;
   height: auto
 }
 
 .art-block {
   margin: 1.8rem auto 0;
+}
+
+.card img {
+    max-width: 100%;
 }
 
 /* ====  GALERIA ============================ */
@@ -586,7 +607,6 @@ nav.show div.icon-close {
 }
 
 #galeria .note {
-  margin-top: -2rem;
   font-size: 0.9rem;
 }
 
@@ -594,18 +614,14 @@ nav.show div.icon-close {
   color: var(--base-color);
 }
 
+#galeria iframe {
+    max-width: 100%;
+}
+
 .gal-block {
   text-align: center;
 
-  width: 30rem;
   height: auto;
-}
-
-iframe {
-  padding-top: 0;
-
-  width: 30rem;
-  height: 20rem;
 }
 
 /*====  CONTATO ============================ */
@@ -634,6 +650,14 @@ iframe {
 
 #contato ul li i {
   color: var(--base-color);
+}
+
+.links .grid li a {
+  color: var(--text-color);
+}
+
+.links .grid li a:hover {
+  color: var(--title-color);
 }
 
 /*====  FOOTER ============================ */
@@ -677,6 +701,28 @@ footer .social a:hover {
 footer .support span {
   color: var(--base-color-second);
   text-transform: uppercase;
+}
+footer .support img {
+    display: block;
+    max-width: 100%;
+}
+
+
+.devs a {
+    color: #F4BD3E;
+}
+
+.devs a:hover {
+    color: #c7941e;
+}
+
+.devs {
+    font-size: 0.8rem;
+    text-transform: none;
+    color: #FFFFFF;
+
+    margin: 2rem 1.5rem 0;
+    text-align: center;
 }
 
 /* Back to top */
@@ -777,8 +823,11 @@ footer .support span {
     order: 1;
     min-width: none;
     max-height: 20rem;
+    max-width: none;
     float: right;
-    margin: 0 0 1rem 2rem;
+    margin: 0 0 2rem 2rem;
+    display: inline-block;
+    left: 0;
   }
 
   #inicio .text {
@@ -801,10 +850,13 @@ footer .support span {
 
   #bio .image {
     order: 1;
+    width: 30rem;
     min-width: none;
     max-height: 20rem;
     float: right;
     margin: 0 1rem 1rem 2rem;
+    display: inline-block;
+    left: 0;
   }
 
   #bio .text {
@@ -815,6 +867,7 @@ footer .support span {
   /* eventos */
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
+    display: inline-block;
   }
 
   .card {
@@ -851,7 +904,6 @@ footer .support span {
 
   .section .subtitle {
     width: 70rem;
-    height: 6.2rem;
   }
   
   .img-expo {
@@ -860,7 +912,7 @@ footer .support span {
   }
 
   /* galeria */
-    .gal-block {
+.gal-block {
     display: flex;
     flex-direction: column;
     align-items: center;  
@@ -889,14 +941,6 @@ footer .support span {
     max-width: 25rem;
   }
 
-  .links .grid li a {
-    color: var(--text-color);
-  }
-
-  .links .grid li a:hover {
-    color: var(--title-color);
-  }
-
   /* footer */
   footer.section {
     padding: 3.75rem 0;
@@ -923,23 +967,13 @@ footer .support span {
   footer .logo {
     font-size: 2.25rem;
   }
-
+  
+  
   .devs {
-    font-size: 0.8rem;
-    text-transform: none;
-    color: #FFFFFF;
-
-    margin: 2rem 0 0;
-    text-align: center;
+    font-size: 1rem;
+    margin: 2rem 1.5rem 0;
   }
 
-  .devs a {
-    color: #F4BD3E;
-  }
-
-  .devs a:hover {
-    color: #c7941e;
-  }
 }
 /* large devices: 1023 > */
 /* large devices: 992 > */
