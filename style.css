@@ -557,12 +557,16 @@ nav.show div.icon-close {
   text-align: center;
 }
 
+.cards {
+  display: inline-block;
+}
+
 .card {
   margin: 0 auto;
 }
 
 .card {
-  padding: 3.625rem 2rem;
+  padding: 2rem 2rem;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
   border-bottom: 0.25rem solid var(--base-color-second);
   border-radius: 0.25rem 0.25rem 0 0;
@@ -586,7 +590,6 @@ nav.show div.icon-close {
 }
 
 .img-expo {
-  width: 15.75rem;
   height: auto
 }
 
@@ -604,7 +607,6 @@ nav.show div.icon-close {
 }
 
 #galeria .note {
-  margin-top: -2rem;
   font-size: 0.9rem;
 }
 
@@ -619,15 +621,7 @@ nav.show div.icon-close {
 .gal-block {
   text-align: center;
 
-  width: 30rem;
   height: auto;
-}
-
-iframe {
-  padding-top: 0;
-
-  width: 30rem;
-  height: 20rem;
 }
 
 /*====  CONTATO ============================ */
@@ -656,6 +650,14 @@ iframe {
 
 #contato ul li i {
   color: var(--base-color);
+}
+
+.links .grid li a {
+  color: var(--text-color);
+}
+
+.links .grid li a:hover {
+  color: var(--title-color);
 }
 
 /*====  FOOTER ============================ */
@@ -699,6 +701,28 @@ footer .social a:hover {
 footer .support span {
   color: var(--base-color-second);
   text-transform: uppercase;
+}
+footer .support img {
+    display: block;
+    max-width: 100%;
+}
+
+
+.devs a {
+    color: #F4BD3E;
+}
+
+.devs a:hover {
+    color: #c7941e;
+}
+
+.devs {
+    font-size: 0.8rem;
+    text-transform: none;
+    color: #FFFFFF;
+
+    margin: 2rem 1.5rem 0;
+    text-align: center;
 }
 
 /* Back to top */
@@ -843,6 +867,7 @@ footer .support span {
   /* eventos */
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
+    display: inline-block;
   }
 
   .card {
@@ -879,7 +904,6 @@ footer .support span {
 
   .section .subtitle {
     width: 70rem;
-    height: 6.2rem;
   }
   
   .img-expo {
@@ -888,7 +912,7 @@ footer .support span {
   }
 
   /* galeria */
-    .gal-block {
+.gal-block {
     display: flex;
     flex-direction: column;
     align-items: center;  
@@ -917,14 +941,6 @@ footer .support span {
     max-width: 25rem;
   }
 
-  .links .grid li a {
-    color: var(--text-color);
-  }
-
-  .links .grid li a:hover {
-    color: var(--title-color);
-  }
-
   /* footer */
   footer.section {
     padding: 3.75rem 0;
@@ -951,23 +967,13 @@ footer .support span {
   footer .logo {
     font-size: 2.25rem;
   }
-
+  
+  
   .devs {
-    font-size: 0.8rem;
-    text-transform: none;
-    color: #FFFFFF;
-
-    margin: 2rem 0 0;
-    text-align: center;
+    font-size: 1rem;
+    margin: 2rem 1.5rem 0;
   }
 
-  .devs a {
-    color: #F4BD3E;
-  }
-
-  .devs a:hover {
-    color: #c7941e;
-  }
 }
 /* large devices: 1023 > */
 /* large devices: 992 > */
