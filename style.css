@@ -698,15 +698,38 @@ footer .social a:hover {
   transform: translateY(-8px);
 }
 
+footer .support {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+footer .support .production, 
+footer .support .production-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 footer .support span {
   color: var(--base-color-second);
   text-transform: uppercase;
 }
+
+footer .support .logo-circle {
+  width: 110px;
+  height: auto;
+
+  border-radius: 50%;
+
+  border: 3px solid #F4BD3E;
+  padding: 2px;
+}
+
 footer .support img {
     display: block;
     max-width: 100%;
 }
-
 
 .devs a {
     color: #F4BD3E;
@@ -960,7 +983,7 @@ footer .support img {
     text-transform: uppercase;
     font-weight: 700;
 
-    width: 20vw;
+    width: 30vw;
     height: auto;
   }
 
